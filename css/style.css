@@ -12,7 +12,18 @@ body {
     height: auto;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header button {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 50px;
 }
 
 .container {
