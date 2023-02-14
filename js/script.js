@@ -1,20 +1,11 @@
-const span = document.querySelectorAll('span'),
-    width = document.querySelector('.container').clientWidth,
-    height = document.querySelector('.container').clientHeight,
-    remaining = document.querySelector('.remaining');
-
-let square = (width / 50) * (height / 50);
+const span = document.querySelectorAll('span');
 let randomColor;
-
-remaining.innerHTML = `Remaining: ${square}`;
 
 span.forEach((item, i) => {
     item.addEventListener('mouseover', () => {
-        getColor();
         if (item.style.backgroundColor == ''){
+            getColor();
             item.style.backgroundColor = `#${randomColor}`;
-            square--;
-            remaining.innerHTML = `Remaining: ${square}`;
         }
     });
 });
